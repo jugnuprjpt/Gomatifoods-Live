@@ -1,0 +1,103 @@
+.dashboard-menu{
+
+    .navbar-nav{
+        
+        .nav-link{
+
+            @include large-width{ padding-left: 25px; padding-right: 25px; }
+        }
+        a{ color:#000; font-weight: 600; &:hover{color:$darkorange; } }
+
+    }
+    background: #fff;
+	
+	box-shadow:0 1px 8px rgba(0, 0, 0, 0.2);
+	.logo{ max-height:50px;}
+
+}
+
+.dashboard{
+.minwidth{ min-width:120px;}
+.posreporttop{ @include small{ .dateinput{ max-width:200px;} }   }
+.box{ width:180px; max-height:151px; display: flex; align-items: center; justify-content: center; border-radius: 25px; box-shadow: 0 0 10px rgba(0,0,0,0.2); flex-direction: column; padding: 20px 15px;  margin-bottom: 25px;
+h3{ font-size: 1.2rem; margin:10px 0 0 0; font-family:'Inter', sans-serif;}
+}    
+min-height:100vh;
+.card-header{ background: #fff; h2{ font-weight: 700; font-size: 1.2rem; color:#f1501a; margin-bottom: 0; } }
+.savebtn{ width:16px; margin-right: 7px; }
+.change-pass-field{ max-width: 400px; margin: 0 auto; width:100%;}
+.custommrg{margin-top:30px;}
+.ng-table-pager{ padding:5px; display:flex; align-items: center; justify-content: space-between;}
+.ng-table-counts{ .btn{border:1px solid #e3e3e3; &.active{  color:#fff; @include background-gradient(#fdb132, #ff6b26, "vertical"); } }}
+.ng-table-pagination{ li { &.active{ a{ color:$orangecl; font-weight: 700;}  } }    a{ padding:5px 8px; color:#333;   } }
+
+.rightcontnet{ .card{ border:0; .card-header{ border-radius: 0; } .card-body{ border-radius: 0; } } }
+.menusidebar{
+@include desktop{
+ width:260px;
+}
+
+
+ .card-header{padding:0;h4{margin:0; a{ display:block; padding:12px 10px 12px 80px;}   }  border-bottom:1px solid #e3e3e3;  }  border-right:1px solid rgba(148, 148, 148, 0.2); .card{ border-radius:0; border:0; } .card-header{ background:#fff; border-radius:0; } padding-bottom:50px; 
+
+
+.editdiv{ padding:25px 0; .userimg{width:120px; height:120px; border-radius:100%; background:#eaeaea; overflow:hidden; margin:0 auto;    } .usertitile{ font-weight:600;  margin:10px 0 0 0; font-size:1.2rem; }   }
+background: #fff;
+border-right:1px solid  #e3e3e3 !important;
+    }
+	
+	.extendlinkcl{
+h5{ margin:0;  a{ position:relative; display:block; padding:10px 15px 10px 50px; color:#333333; font-size:1rem;  &:before{   position:absolute; /*@include center(vertical);*/
+transform:translateY(-50%) scale(0.4); top:50%; left:0px;      } &:hover{   @include background-gradient(#ff6b26, #fdb132, "vertical"); color:#fff;       }    span{ width:100%; i{float:right;}   }  &.active{ background:#ff6b26; color:#fff;   }   }   } .card-body{ @include background-gradient(#fdb132, #ff6b26, "vertical"); /*padding:10px 10px 10px 40px;*/ padding:0;   }  
+}
+
+.custom-select {
+    background: #fff url(../img/svg/chevron-down-solid.svg) no-repeat right 0.8rem
+      center/15px 15px;
+    border-radius: 0px;
+    @include upto-desktop{
+  
+      background: #fff url(../img/svg/chevron-down-solid.svg) no-repeat right 0.2rem
+      center/15px 15px;
+  
+    }  
+  }
+  .form-control{ border-radius: 0; }
+  .dateinput .input-group-append .input-group-text{ border-radius: 0;}
+  .dateinput .form-control{ padding:6px 15px !important;}
+
+}
+
+.pro{@extend .extendlinkcl; a{ background:#fff;  &:before{  content:url(../img/dash-pro.png);} &:hover{ &:before{  content:url(../img/dash-pro-wh.png);    } } &.active{ &:before {  content:url(../img/dash-pro-wh.png);  }  }  }     &.active{ &:before {  content:url(../img/dash-pro-wh.png);  }  &:hover{ &:before {  content:url(../img/dash-pro-wh.png);  }   }    }     }
+
+.report{@extend .extendlinkcl; a{  background:#fff; &:before{  content:url(../img/dash-report.png);} &:hover{ &:before{  content:url(../img/dash-report-wh.png);    } } &.active{ &:before {  content:url(../img/dash-report-wh.png);  }  }   }     &.active{ &:before {  content:url(../img/dash-report-wh.png);  }  &:hover{ &:before {  content:url(../img/dash-report-wh.png);  }   }    } 
+
+&.card-open { h5 { a { @include background-gradient(#ff6b26, #fdb132, "vertical");  &:before {
+    
+    content:url(../img/dash-report-wh.png);  }       }}  }
+
+  }
+
+.changepass{ @extend .extendlinkcl; a{  background:#fff; &:before{  content:url(../img/dash-change-pass.png);} &:hover{ &:before{  content:url(../img/dash-change-pass-wh.png);    } } &.active{ &:before {  content:url(../img/dash-change-pass-wh.png);  }  }    }     &.active{ &:before {  content:url(../img/dash-change-pass-wh.png);  }  &:hover{ &:before {  content:url(../img/dash-change-pass-wh.png);  }   }    }  }
+  .submenudiv { li a{ padding:10px 10px 10px 35px; color:#333; /*margin-bottom:10px;*/ display:block; i{ transition: margin ease 0.5s;}  &:hover{ @include background-gradient(#ff6b26, #fdb132, "vertical"); color:#fff; i{ margin-right:20px !important;  transition: margin ease 0.5s;  }     }  &:before{display:none;} border-bottom:1px solid #fff; font-size:12px;  }  }
+
+.logincontent{
+.input-group-prepend{
+img{ width:13px;}
+}
+h2{ font-size:1.2rem; font-weight:700; margin-bottom:20px; } 
+}  
+.loginbg{ background:url(../img/login-bg.jpg) no-repeat scroll center center; background-size:cover; min-height:200px;
+
+  
+@media  (max-device-width: 767px) and (orientation: landscape) {
+
+  min-height:400px;
+
+}
+
+ }
+
+
+
+

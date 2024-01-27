@@ -1,0 +1,260 @@
+.carbg {
+  background: url(../img/carbg.jpg) no-repeat scroll center center / cover;
+}
+
+.filldetail{
+  @extend .commoncard-cl;  .card {
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+.cardiv {
+  @extend .commoncard-cl;
+  .inputbox {
+    border: 2px solid $inputcl;
+    color: #333;
+    width: auto;
+    height: 50px;
+    border-radius: 25px;
+    margin: 0 auto;
+    max-width: 100%;
+	
+	&.required,&.ng-invalid.ng-touched {
+  border-color: #dc3545 !important; }
+  }
+  .orangebtn {
+    font-size: 1.2rem;
+  }
+  .card {
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: rgba(255,255,255,0.92);
+  }
+  border-radius: 0;
+  .backbutton{ color:#fff; position:absolute; left:15px;  }
+
+  .card-footer{ background: transparent;}
+}
+
+.car-before-plan {
+  border-radius: 0;
+  @extend .commoncard-cl;
+  @extend .commontittle;
+  @extend .citylist-cl;
+  @extend .morebtn;
+  @extend .iconlist-cl;
+  @extend .model-list-cl;
+  @extend .variant-list-cl;
+  @extend .Reg-year-list-cl;
+  @extend .forcustom;
+
+  .card {
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: rgba(255,255,255,0.92);
+  }
+  .orangebtn {
+    min-width: 150px;
+  }
+  .otherdetails,
+  .previnsurer {
+    .bxcl {
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      background: #fff;
+      /*border: 2px solid;
+      @extend .border-cl;*/
+    }
+    .ncbselect {
+      border-width: 2px;
+      max-width: 300px;
+    }
+    .btn-outline-secondary {
+      @extend .border-cl;
+      padding: 8px 15px;
+      &:hover {
+        @include background-gradient(#fdb132, #ff6b26, "vertical");
+        border-color: #fff;
+      }
+      &.active {
+        @include background-gradient(#fdb132, #ff6b26, "vertical");
+        border-color: #fff;
+      }
+    }
+  }
+  .previnsurer,
+  .otherdetails {
+
+    .dateinput .input-group-append .input-group-text { border-top-right-radius : 25px; border-bottom-right-radius:25px; }
+    .gridview {
+      display: grid;
+      grid-template-columns: 50% auto;
+      [class*="col-"] {
+        display: flex;
+        flex-direction: column;
+      }
+      @include upto-small {
+        grid-template-columns: 100%;
+      }
+    }
+  }
+
+  .previnsurer {
+    .forpolicytype {
+      max-width: 400px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .backbtn{ top:8px;}
+}
+
+.car-planlist-page {
+  @extend .planlist-page;
+}
+
+.car-premium-breakup {
+  @extend .premium-breakup-extend;
+}
+.car-after-plan {
+  @extend .forcustom;
+  .car-after-plan-detail {
+    background: #f6f6f6;
+    color: #252a37;
+  }
+  .proamout {
+    font-size: 18px;
+  }
+  .form-control {
+    border: 1px solid #e3e3e3;
+    padding: 20px 15px;
+    height: 46px;
+    color: #000;
+    border-radius: 10px;
+  }
+  .custom-select {
+    padding: 10px 15px;
+    height: auto;
+    color: #000;
+    border:/*1px solid rgba(148,148,148,0.2)*/ 1px solid #ced4da;
+    border-radius: 10px;
+	overflow:hidden;
+	text-overflow:ellipsis;	
+	white-space:nowrap;
+  }
+  .datepickerdiv {
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  .pull-left {
+    float: left;
+  }
+
+  .fortab {
+    .nav-item {
+      font-weight: 700;
+      letter-spacing: 1px;
+      .nav-link{color:#333;
+      &.active{ color:#fff; }
+      }      
+      font-family: 'PT Serif', serif;
+      border-right: 2px solid #fff;
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+  @include upto-desktop{
+  label{ font-size:0.8rem;}
+  }
+  
+}
+
+.car-review-pay {
+  @extend .forcustom;
+  overflow: hidden;
+  background: #fff;
+  h3 {
+    font-size: 18px;
+    padding-bottom: 10px;
+    font-weight: 700;
+    border-bottom: 1px dotted #fff;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+  .member-detail-review {
+    color: #fff;
+    background: $orangecl;
+    .text {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #fff;
+    }
+    .help-block {
+      color: yellow;
+    }
+  }
+  .premium-detail {
+    .text {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #a7a7a7;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .help-block {
+      color: red;
+    }
+    .form-control {
+      height: 30px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+    }
+  }
+  .topbar {
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    .toptitle {
+      display: flex;
+      align-items: center;
+      h2 {
+        font-size: 14px;
+        font-weight: 700;
+      }
+      img {
+        max-height: 60px;
+      }
+    }
+    .proamout {
+      font-size: 23px;
+      color: $orangecl;
+      font-weight: 700;
+      align-self: center;
+      /*    margin-left: auto; */
+      margin: 0 auto;
+    }
+    .quotationdiv {
+      p {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .pre-text {
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .bdr {
+    background: #f0f0f0;
+  }
+}
+

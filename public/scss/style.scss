@@ -1,0 +1,30 @@
+@import 'custom';
+@import 'variable';
+@import 'common';
+@import 'extend-class';
+@import 'navigation';
+@import 'dashboard';
+@import 'commercial';
+@import 'travel';
+@import 'health';
+@import 'bike';
+@import 'car';
+@import 'footer';
+
+body{
+    font-family: 'Inter', sans-serif;
+    color:#333;
+    font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'PT Serif', serif;
+}
+
+
+.ptsans{
+    font-family: 'PT Serif', serif;
+}
+
+.required, select.ng-invalid.ng-touched, input.ng-invalid.ng-touched {
+  border-color: #dc3545 !important; }

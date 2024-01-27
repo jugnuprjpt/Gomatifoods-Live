@@ -1,0 +1,15 @@
+.innerpagemenu{
+
+    .navbar-nav{
+        
+        .nav-link{
+
+            @include large-width{ padding-left: 25px; padding-right: 25px; }
+        }
+        a{ color:#000; font-weight: 600; &:hover{color:$darkorange; } }
+
+    }
+    background: #fff;
+    .orangebtn{ @include  upto-x-small{  font-size: 12px; } }
+
+}
